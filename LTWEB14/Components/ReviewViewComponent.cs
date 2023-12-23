@@ -20,9 +20,10 @@ namespace LTWEB14.Components
             var listofReview = (from m in _context.Reviews
                                 join n in _context.Customers on m.CustomerID equals n.CustomerID
                                 where (m.Status == true && n.Status==true) select m).ToList();
-            
+
             return await Task.FromResult((IViewComponentResult)View("Default", listofReview));
             
+
         }
     }
 }
