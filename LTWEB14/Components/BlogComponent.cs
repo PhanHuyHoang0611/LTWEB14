@@ -14,9 +14,8 @@ namespace LTWEB14.Components
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var listofBlog = (from b in _context.Blogs
-                              where (b.IsActive == true) && (b.Contents == null)
-                              orderby b.BlogID descending
-                              select b).Take(3).ToList();
+                              where (b.IsActive == true)
+                              select b).Take(4).ToList();
 
             return await Task.FromResult((IViewComponentResult)View("Default", listofBlog));
         }

@@ -25,7 +25,7 @@ namespace LTWEB14.Controllers
         {
             return View();
         }
-        [Route("/blog-{slug}-{id:long}.html", Name ="Details")]
+        /*[Route("/blog-{slug}-{id:long}.html", Name ="Details")]
         public IActionResult Details(long? id)
         {
             if (id == null)
@@ -39,7 +39,7 @@ namespace LTWEB14.Controllers
                 return NotFound();
             }
             return View(blog);
-        }
+        }*/
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
