@@ -1,0 +1,29 @@
+﻿@using LTWEB14.Models;
+@model List<Blog>
+
+@foreach (var item in Model)
+{
+    <div class="col-md-3 d-flex ftco-animate">
+		<div class="blog-entry align-self-stretch">
+			<a asp-controller="Blog" asp-action="Details" asp-route-Slugb ="" href="blog-single.html" class="block-20"
+			   style="background-image: url('@item.Image');">
+			</a>
+			<div class="text mt-3 d-block">
+				<h3 class="heading mt-3">
+					<a href="">
+						@item.Title
+					</a>
+				</h3>
+				<div class="meta mb-3">
+					<div><a href="#">@item.PublishDate</a></div>
+					<div><a href="#">Admin</a></div>
+					<div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+}
+
+
+
+<h1>dlkfjalkdjflka</h1>

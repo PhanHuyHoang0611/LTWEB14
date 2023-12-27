@@ -12,6 +12,7 @@ namespace LTWEB14.Models
 		public DbSet<Review> Reviews { get; set; }
 		public DbSet<Customer> Customers { get; set; }
         public DbSet<Instagram> Instagrams { get; set; }
+		public DbSet<Blog> Blogs { get; set; }
     }
 
 }
