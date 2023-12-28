@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using LTWEB14.Areas.Admin.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace LTWEB14.Models
 {
@@ -13,6 +14,7 @@ namespace LTWEB14.Models
 		public DbSet<Customer> Customers { get; set; }
         public DbSet<Instagram> Instagrams { get; set; }
 		public DbSet<Blog> Blogs { get; set; }
+		public DbSet<AdminMenu> AdminMenus { get; set; }
     }
 
 }
