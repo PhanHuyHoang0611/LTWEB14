@@ -34,12 +34,12 @@ namespace LTWEB14.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Delete(int id)
         {
-            var deleteMenu = _context.Menus.Find(id);
-            if(deleteMenu == null)
+            var deleMenu = _context.Menus.Find(id);
+            if(deleMenu == null)
             {
                 return NotFound();
             }
-            _context.Menus.Remove(deleteMenu);
+            _context.Menus.Remove(deleMenu);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }

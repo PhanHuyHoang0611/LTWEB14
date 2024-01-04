@@ -1,12 +1,15 @@
 ﻿@using LTWEB14.Models;
 @model IList<Menu>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
 <main id="main" class="main">
     <div class="pagetitle">
         <h2>Danh sách menu</h2>
     </div>
 
     <p>
-        <a type="button" class="btn btn-success" asp-asp-area="Admin" asp-controller="Menu" asp-asp-action="Create">
+        <a type="button" class="btn btn-success" asp-area="Admin" asp-controller="Menu" asp-action="Create">
             <i class="bi bi-file-earmark-text me-1"></i>Thêm menu
         </a>
     </p>
@@ -25,7 +28,7 @@
                                     <td class="col-2 text-center">Menu cha</td>
                                     <td class="col-2 text-center">Thứ tự</td>
                                     <td class="col-1 text-center">Ẩn/Hiện</td>
-                                    <td class="col-2 text-center">Chức năng</td>
+                                    <th class="col-2 text-center">Chức năng</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -33,20 +36,20 @@
                                 {
                                     <tr>
                                         <th class="text-center" scope="row">@item.MenuID</th>
-                                        <td> <a asp-area="Admin" asp-controller="Menu" asp-action="Details"
-                                            asp-route-id="@item.MenuID" class="text-primary">@item.MenuName</a></td>
-                                            <td class="text-center">@item.Levels</td>
-                                            <td class="text-center">@item.ParentID</td>
-                                            <td class="text-center">@item.MenuOrder</td>
-                                            <td class="text-center">@item.IsActive</td>
-                                            <td class="text-center">
-                                                <a asp-area="Admin" asp-controller="Menu" asp-action="Edit"
+                                        <td><a asp-area="Admin" asp-controller="Menu" asp-action="Details"
+                                                asp-route-id="@item.MenuID" class="text-primary">@item.MenuName</a></td>
+                                        <td class="text-center">@item.Levels</td>
+                                        <td class="text-center">@item.ParentID</td>
+                                        <td class="text-center">@item.MenuOrder</td>
+                                        <td class="text-center">@item.IsActive</td>
+                                        <td class="text-center">
+                                            <a asp-area="Admin" asp-controller="Menu" asp-action="Edit"
                                                     asp-route-id="@item.MenuID" class="btn btn-primary btn-sm"
                                                     title="Sửa nội dung bài viết"><i class="bi bi-pencil"></i></a>
-                                                <a asp-area="Amdin" asp-controller="Menu" asp-action="Delete"
+                                            <a asp-area="Admin" asp-controller="Menu" asp-action="Delete"
                                                     asp-route-id="@item.MenuID" class="btn btn-danger btn-sm"
-                                               title="Xóa thông tin bài viết"><i class="bi bi-trash"></i></a>
-                                            </td>
+                                                    title="Xóa thông tin bài viết"><i class="bi bi-trash"></i></a>
+                                        </td>
                                     </tr>
                                 }
                             </tbody>
